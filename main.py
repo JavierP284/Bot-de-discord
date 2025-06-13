@@ -87,7 +87,7 @@ async def on_message(message):
     print(f"{message.channel}: {message.author}: {message.author.name}: {message.content}")
 
     if "hola" in message.content.lower():
-        await message.channel.send(f"Hola! {message.author.name}!")
+        await message.channel.send(f"Vayase a chambear! {message.author.name}!")
     
     # Esto permite que los comandos funcionen
     await bot.process_commands(message)
