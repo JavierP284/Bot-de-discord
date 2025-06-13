@@ -40,6 +40,21 @@ bot.add_command(skip)
 bot.add_command(stop)
 
 @bot.command()
+async def info(ctx):
+    mensaje = (
+        "**Comandos disponibles:**\n"
+        "🎵 `$play <canción o url>` — Reproduce música de YouTube en tu canal de voz\n"
+        "⏸️ `$pause` — Pausa la música\n"
+        "▶️ `$resume` — Reanuda la música\n"
+        "⏭️ `$skip` — Salta la canción actual\n"
+        "⏹️ `$stop` — Detiene la música y desconecta\n"
+        "📚 `$wiki <consulta>` — Busca un resumen en Wikipedia\n"
+        "🕹️ `$poke <nombre_pokemon>` — Muestra la imagen de un Pokémon\n"
+        "ℹ️ `$info` — Muestra este mensaje de ayuda\n"
+    )
+    await ctx.send(mensaje)
+
+@bot.command()
 async def poke(ctx, arg):
     try:
         pokemon = arg.split(" ",1)[0].lower()
@@ -72,7 +87,7 @@ async def on_message(message):
     print(f"{message.channel}: {message.author}: {message.author.name}: {message.content}")
 
     if "hola" in message.content.lower():
-        await message.channel.send(f"Calla marica {message.author.name}!")
+        await message.channel.send(f"Hola! {message.author.name}!")
     
     # Esto permite que los comandos funcionen
     await bot.process_commands(message)

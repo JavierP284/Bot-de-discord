@@ -28,7 +28,8 @@ Este es un bot de Discord multifuncional desarrollado en Python. El bot incluye 
    ```
 
 ## Uso
-
+- Para mostrar los comandos:
+  Escribe `$info`  
 - Para reproducir música:  
   Escribe `$play <nombre de la canción o URL de YouTube>` en un canal de texto.
 - Para pausar, reanudar, saltar o detener la música:  
